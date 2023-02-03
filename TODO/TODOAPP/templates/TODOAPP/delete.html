@@ -1,0 +1,37 @@
+{% extends "TODOAPP/layout.html"%}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="{% static 'TODOAPP/updateDelete.css' %}" rel="stylesheet">
+
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
+<div class="balls" id="green"></div>
+<div class="balls" id="r"></div>
+<div class="balls" id="b"></div>
+<div class="balls" id="m"></div>
+<div class="balls" id="k"></div>
+<div class="balls" id="s"></div>
+<div class="balls" id="z"></div>
+<div class="balls" id="zz"></div>
+<div class="balls" id="zzz"></div>
+<div class="balls" id="zzzz"></div>
+
+<div class="side">
+    <div class="center-column">
+        <h3 style="font-size: 40px">Delete tasks </h3>
+        <div class="item-row">
+        <p style="color: #00CED1; font-size: 25px ">Are you sure that you want to delete? </p>
+        </div>
+        <p style="font-size: 19px">{{item}}</p>
+        <a href="{% url 'index' %}">Cancel</a>
+        <form method="post" action="">
+            {% csrf_token %}
+            <input style="background-color: Violet" type="submit" name="confirm">
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

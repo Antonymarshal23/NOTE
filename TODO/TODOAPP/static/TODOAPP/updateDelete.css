@@ -1,0 +1,148 @@
+	body{
+		background-color: white;
+	}
+	.side{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 97%;
+    }
+
+	input{
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+
+	input::placeholder {
+	  color: #d3d3d3;
+	}
+
+	.submit{
+		background-color: #6BA3E8;
+		color: orange;
+
+	}
+
+	.center-column{
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: white;
+		border-radius: 0px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+		display: grid;
+        align-items: center;
+        justify-content: center;
+	}
+
+	.item-row{
+		background-color: white;
+		margin: 10px;
+		padding: 15px;
+		border-radius: 3px;
+		color: black;
+		font-size: 16px;
+		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+		display: grid;
+        align-items: center;
+        justify-content: center;
+	}
+
+	.btn-danger{
+		background-color: #ffae19;
+		border-color: #e59400;
+	}
+	.border{
+	    border: 2px solid red;
+	    width: 200px;
+	    padding: 2px;
+	    relation: flex;
+	    position: static;
+	    justify-content: right;
+	    text-align: right;
+	    display: grid;
+        align-items: center;
+        justify-content: center;
+
+	}
+	.balls {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    }
+
+  #red {
+    background: orange;
+    left: 80%;
+    top: 90%;
+    width: 20px;
+    height: 20px;
+  }
+  #b {
+    background: orange;
+    left: 5%;
+    top: 10%;
+  }
+  #m {
+    background: red;
+    left: 90%;
+  }
+  #r {
+    background: green;
+    left: 77%;
+    top: 20%;
+    width: 25px;
+    height: 25px;
+  }
+  #blue {
+    background: blue;
+    left: 14%;
+    animation-timing-function: ease-out;
+    width: 20px;
+    height: 20px;
+  }
+  #green {
+    background: green;
+    left: 15%;
+    top: 35%;
+  }
+   #k {
+    background: DarkTurquoise;
+    left: 4%;
+    top: 78%;
+  }
+   #s {
+    background: DeepPink;
+    left: 75%;
+    top: 35%;
+  }
+  #z {
+    background: Plum;
+    top: 35%;
+  }
+  #zz {
+    background: DeepPink;
+    left: 87%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  #zzz {
+    background: Purple;
+    left: 95%;
+    top: 35%;
+    width: 20px;
+    height: 20px;
+  }
+  #zzzz {
+    background: DeepPink;
+    left: 80%;
+    top: 35%;
+    width: 20px;
+    height: 20px;
+  }

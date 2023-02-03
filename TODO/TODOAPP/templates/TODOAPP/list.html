@@ -1,0 +1,42 @@
+{% extends "TODOAPP/layout.html"%}
+{% load static %}
+{% block body %}
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="{% static 'TODOAPP/style.css' %}" rel="stylesheet">
+
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
+<div class="balls" id="green"></div>
+<div class="side">
+<div class="center-column">
+    <h3 style="font-size: 40px; text-align: center">TODO LIST</h3>
+    <form method="POST" action="/">
+        {% csrf_token %}
+        {{form.title}}
+        <input type="submit" name="Create Task">
+    </form>
+
+    <div class="todo-list">
+        {% for task in tasks%}
+            <div class="item-row">
+                <div class="border">
+                <a href="{% url 'update' task.id %}">Update</a>
+                <a href="{% url 'delete' task.id %}">Delete</a>
+                </div>
+                {% if task.complete == True %}
+                <p>{{task}}</p>
+                <p style="color:red"><b>Task Completed</b></p>
+                {% else %}
+                <span>{{task}}</span>
+                {% endif %}
+            </div>
+        {% empty %}
+            <li style="font-size: 50px; font: ">No Tasks Add</li>
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}
+
